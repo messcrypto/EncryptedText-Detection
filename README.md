@@ -1,17 +1,35 @@
-# Encrypted Text Detection
 
-This project aims to **detect whether a given text is encrypted** and, if so, **predict the type of encryption** used.
+# 🔐 Encrypted Text Detection using Python
 
-## 🔍 Project Goals
-- Classify text as "Encrypted" or "Plain".
-- Use machine learning techniques to analyze the structure of text.
-- Support common encryption types (Caesar, Base64, etc.).
+This project uses simple techniques in data analysis and AI to detect whether a given text is encrypted or not.
 
-## 🛠️ Tools & Languages
+## 🧠 Technologies Used
 - Python
+- Pandas
 - Scikit-learn
-- Pandas, NumPy
-- Jupyter Notebooks
+- CSV dataset
+- Jupyter Notebook (optional)
 
-## 👩‍💻 Author
-Hadjer Messeguem – [GitHub Profile](https://github.com/messcrypto)
+## 🧪 Features
+- Detects encrypted vs plain text
+- Can be extended with more encryption types
+- Trained using example data
+
+## 📁 Files
+- `main.py` – The main script for detection
+- `data.csv` – Dataset used for training and testing
+- `README.md` – Project description and documentation
+
+## ✅ How to Run
+1. Clone the repo
+2. Make sure all required libraries are installed
+3. Run `main.py` using any Python environment (PC or online compiler)
+
+## 📈 Future Improvements
+- Add support for multiple encryption types
+- Add user interface
+- Improve model accuracy
+
+---
+
+*This is part of a learning journey by Haajer, combining Data Analysis, Cryptography, and AI.*
