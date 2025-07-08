@@ -1,4 +1,7 @@
-text
-VGhpcyBpcyBhIHRlc3QgdGV4dA==
-hello world
-U29tZSBtb3JlIHRleHQgd2l0aCBiYXNlNjQ=
+text,label
+"This is an encrypted text",1
+"Hello world",0
+"qwertyuioplkjhgfdsazxcvbnm",1
+"This is a normal sentence",0
+"Encrypted text again!",1
+"How are you doing today?",0
