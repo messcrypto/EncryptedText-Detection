@@ -1,21 +1,31 @@
-import base64
-import re
+import pandas as pd
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import BernoulliNB
 
-def is_base64_encoded(text):
-    base64_pattern = r'^[A-Za-z0-9+/=]+\Z'
-    return bool(re.fullmatch(base64_pattern, text))
+# قراءة البيانات من ملف CSV
+df = pd.read_csv('data.csv')
 
-def detect_encrypted_text(text):
-    try:
-        if is_base64_encoded(text):
-            base64.b64decode(text)
-            return "✅ النص يبدو أنه مشفّر بـ Base64."
-        else:
-            return "ℹ️ النص لا يبدو مشفرًا بـ Base64."
-    except Exception:
-        return "⚠️ لم يتم التعرف على نوع التشفير أو فشل في التحليل."
+# ميزات البيانات
+X = df['text']
+y = df['label']
 
-if __name__ == "__main__":
-    input_text = input("🔍 أدخل النص لتحليله: ")
-    result = detect_encrypted_text(input_text)
-    print(result)
+# تحويل النصوص إلى متجهات
+vectorizer = CountVectorizer()
+X_vec = vectorizer.fit_transform(X)
+
+# تدريب النموذج
+model = BernoulliNB()
+model.fit(X_vec, y)
+
+# تجربة النموذج على جمل جديدة
+test_sentences = [
+    "Hello, how are you?",
+    "kzjvnsdklvnsdlvnsd", 
+    "Encrypted text example",
+    "This is a regular message"
+]
+
+for sentence in test_sentences:
+    sentence_vec = vectorizer.transform([sentence])
+    prediction = model.predict(sentence_vec)[0]
+    print(f"{sentence} => {'Encrypted' if prediction == 1 else 'Not Encrypted'}")
