@@ -1,35 +1,36 @@
 
-# 🔐 Encrypted Text Detection using Python
+# 🔐 EncryptedText Detection
 
-This project uses simple techniques in data analysis and AI to detect whether a given text is encrypted or not.
+This project aims to automatically detect whether a given text is encrypted or not using basic statistical analysis.
 
-## 🧠 Technologies Used
-- Python
-- Pandas
-- Scikit-learn
-- CSV dataset
-- Jupyter Notebook (optional)
+## 📂 Files
 
-## 🧪 Features
-- Detects encrypted vs plain text
-- Can be extended with more encryption types
-- Trained using example data
+- `main.py`: Python script for detecting encrypted text.
+- `data.csv`: Sample data containing encrypted and non-encrypted messages.
+- `README.md`: Project documentation.
 
-## 📁 Files
-- `main.py` – The main script for detection
-- `data.csv` – Dataset used for training and testing
-- `README.md` – Project description and documentation
+## ⚙️ How it works
 
-## ✅ How to Run
-1. Clone the repo
-2. Make sure all required libraries are installed
-3. Run `main.py` using any Python environment (PC or online compiler)
+The script analyzes the character frequency and entropy of a given input. Based on predefined thresholds, it decides whether the input is likely encrypted or not.
 
-## 📈 Future Improvements
-- Add support for multiple encryption types
-- Add user interface
-- Improve model accuracy
+## 🧠 Technologies
 
----
+- Python 3.x
+- CSV file handling
+- Basic statistics & entropy
 
-*This is part of a learning journey by Haajer, combining Data Analysis, Cryptography, and AI.*
+## 📊 Example
+
+## 📷 Screenshot
+
+![Demo Screenshot](demo_screenshot.png)
+Sample input: `kqjnF8394x==`  
+Output: `This text is likely encrypted.`
+
+## 🤝 Contribution
+
+Feel free to fork and improve the detection algorithm using AI or advanced NLP techniques.
+
+## 📫 Contact
+
+Made by Hajar | GitHub: [YourUsername](https://github.com/YourUsername)
